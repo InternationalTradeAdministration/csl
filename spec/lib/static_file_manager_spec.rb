@@ -13,10 +13,10 @@ describe StaticFileManager do
 
     class SearchClassDummy
       include SeparatedValuesable
-      self.separated_values_config = [:foo, :bar]
+      self.separated_values_config = [:_id, :foo, :bar]
 
       def self.fetch_all
-        { hits: [{ _source: { foo: "one", bar: "two" } }] }
+        { hits: [{ _id: "1234", _source: { foo: "one", bar: "two" } }] }
       end
     end
   end
@@ -31,10 +31,10 @@ describe StaticFileManager do
     it "uploads all format-type files to S3" do
       expect(@s3).to receive(:put_object).with(bucket: StaticFileManager::BUCKET,
                                                key: "search_class_dummy.csv",
-                                               body: "foo,bar\none,two\n")
+                                               body: "_id,foo,bar\n1234,one,two\n")
       expect(@s3).to receive(:put_object).with(bucket: StaticFileManager::BUCKET,
                                                key: "search_class_dummy.tsv",
-                                               body: "foo\tbar\none\ttwo\n")
+                                               body: "_id\tfoo\tbar\n1234\tone\ttwo\n")
       described_class.upload_all_files(SearchClassDummy)
     end
   end

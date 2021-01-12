@@ -10,7 +10,7 @@ describe "Searchable" do
 
       hits = subject[:hits]
 
-      expect(hits.count).to eq(54)
+      expect(hits.count).to eq(61)
       expect(hits.first[:_source]).to be_a(Hash)
 
       # Sorted correctly?

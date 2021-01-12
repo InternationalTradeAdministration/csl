@@ -5,7 +5,7 @@ describe ScreeningList::Consolidated, type: :model do
     subject { described_class.index_names(sources) }
 
     let(:all_index_names) do
-      %w(cap dpl dtc el fse isn plc sdn ssi uvl)
+      %w(cap dpl dtc el fse isn meu plc sdn ssi uvl)
     end
 
     context "with one source" do

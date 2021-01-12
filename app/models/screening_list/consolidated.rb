@@ -9,6 +9,7 @@ module ScreeningList
                           ScreeningList::El,
                           ScreeningList::Fse,
                           ScreeningList::Isn,
+                          ScreeningList::Meu,
                           ScreeningList::Plc,
                           ScreeningList::Sdn,
                           ScreeningList::Ssi,

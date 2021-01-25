@@ -10,7 +10,7 @@ gem "aws-sdk", "~> 2" # https://github.com/tawan/active-elastic-job/pull/95
 gem "elasticsearch"
 gem "elasticsearch-model"
 gem "elasticsearch-persistence"
-gem "jbuilder", "~> 2.10"
+gem "jbuilder", "~> 2.11"
 gem "puma", "~> 4.3"
 gem "rails"
 gem "sanitize"

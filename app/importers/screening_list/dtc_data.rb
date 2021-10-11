@@ -20,7 +20,7 @@ module ScreeningList
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = "https://www.pmddtc.state.gov/sys_attachment.do?sys_id=d351dbfb1bddd8102b6ca932f54bcb14"
+    ENDPOINT = "https://www.pmddtc.state.gov/sys_attachment.do?sys_id=81d49a191b0f70d0d1f1ea02f54bcb76"
 
     def import
       @source_information_url = "https://www.pmddtc.state.gov/?id=ddtc_kb_article_page&sys_id=c22d1833dbb8d300d0a370131f9619f0"
